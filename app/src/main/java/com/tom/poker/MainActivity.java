@@ -12,10 +12,12 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     Poker poker =new Poker();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        poker.shuffle();
         RecyclerView recyclerView =findViewById(R.id.recycler);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
